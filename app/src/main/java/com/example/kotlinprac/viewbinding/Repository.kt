@@ -1,3 +1,3 @@
-package com.example.kotlinprac
+package com.example.kotlinprac.viewbinding
 
 class Repository : ArrayList<RepositoryItem>()

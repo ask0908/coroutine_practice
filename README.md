@@ -115,4 +115,4 @@
 
 - com.example.xxx 부분을 우클릭해서 New > Kotlin data class File from JSON을 선택한다
 - 창이 하나 열리는데 여기에 모든 JSON 응답을 복사해서 붙여넣은 다음 클래스 이름을 넣는다. Repository로 진행함
-- 그러면 JSON 형태에 맞게 클래스들이 생성되고 갖다쓰면 됨
+- 그러면 JSON 형태에 맞게 클래스들이 생성된다. 갖다쓰면 됨

@@ -1,4 +1,4 @@
-package com.example.kotlinprac
+package com.example.kotlinprac.viewbinding
 
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule

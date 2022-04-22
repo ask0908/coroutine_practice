@@ -1,12 +1,9 @@
-package com.example.kotlinprac
+package com.example.kotlinprac.viewbinding
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinprac.databinding.ActivityMainBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -49,7 +46,9 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+// 인터페이스 따로 만들기 귀찮아서 내부 인터페이스로 만듬
 interface GithubService {
+    // 깃허브 레포 중 Kotlin 관련 레포들을 가져옴
     @GET("users/Kotlin/repos")
     fun users(): Call<Repository>
 }

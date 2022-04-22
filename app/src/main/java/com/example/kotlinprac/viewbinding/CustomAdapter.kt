@@ -1,4 +1,4 @@
-package com.example.kotlinprac
+package com.example.kotlinprac.viewbinding
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

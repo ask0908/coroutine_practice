@@ -1,4 +1,4 @@
-package com.example.kotlinprac
+package com.example.kotlinprac.viewbinding
 
 data class RepositoryItem(
     val allow_forking: Boolean,

@@ -1,4 +1,4 @@
-package com.example.kotlinprac
+package com.example.kotlinprac.viewbinding
 
 data class License(
     val key: String,

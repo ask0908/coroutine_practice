@@ -1,4 +1,4 @@
-package com.example.kotlinprac
+package com.example.kotlinprac.viewbinding
 
 data class Owner(
     val avatar_url: String,

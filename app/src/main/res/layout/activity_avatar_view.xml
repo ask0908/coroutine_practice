@@ -10,22 +10,23 @@
 
         <io.getstream.avatarview.AvatarView
             android:id="@+id/avatar_view"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:avatarViewBorderColor="@color/black"
             app:avatarViewBorderWidth="3dp"
             app:avatarViewIndicatorBorderColor="@color/white"
             app:avatarViewIndicatorBorderSizeCriteria="10"
-            app:avatarViewIndicatorColor="@color/white"
+            app:avatarViewIndicatorColor="@android:color/holo_blue_light"
             app:avatarViewIndicatorEnabled="true"
             app:avatarViewIndicatorPosition="bottomRight"
             app:avatarViewIndicatorSizeCriteria="9"
             app:avatarViewInitialsTextStyle="bold"
-            app:avatarViewShape="circle" />
+            app:avatarViewBorderColorArray="@array/rainbow"
+            app:avatarViewBorderRadius="24dp"
+            app:avatarViewShape="rounded_rect" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

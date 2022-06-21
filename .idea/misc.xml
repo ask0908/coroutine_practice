@@ -11,6 +11,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/activity_main.xml" value="0.5055555555555555" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/activity_navigation_main.xml" value="0.25476603119584057" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/activity_navigation_test.xml" value="0.25654450261780104" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/activity_tab.xml" value="0.24610051993067592" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/activity_view_pager.xml" value="0.28937007874015747" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_building.xml" value="0.25476603119584057" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_detail.xml" value="0.2620320855614973" />
@@ -25,6 +26,11 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_search.xml" value="0.25476603119584057" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_second.xml" value="0.25476603119584057" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_setting_first.xml" value="0.2947916666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_test_fifth.xml" value="0.24610051993067592" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_test_firstragment.xml" value="0.24610051993067592" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_test_fourth.xml" value="0.24610051993067592" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_test_second.xml" value="0.24610051993067592" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_test_third.xml" value="0.24610051993067592" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/fragment_third.xml" value="0.25654450261780104" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/inner_nestedscrollview.xml" value="0.23963963963963963" />
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/slide_item_container.xml" value="0.1" />

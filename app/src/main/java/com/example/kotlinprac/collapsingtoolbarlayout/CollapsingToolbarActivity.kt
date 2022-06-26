@@ -2,10 +2,12 @@ package com.example.kotlinprac.collapsingtoolbarlayout
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.view.animation.AlphaAnimation
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.kotlinprac.R
@@ -37,6 +39,8 @@ class CollapsingToolbarActivity : AppCompatActivity(), AppBarLayout.OnOffsetChan
             lifecycleOwner = this@CollapsingToolbarActivity
             mainAppbar.addOnOffsetChangedListener(this@CollapsingToolbarActivity)
             mainToolbar.inflateMenu(R.menu.menu_main)
+            setSupportActionBar(mainToolbar)
+            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
             startAlphaAnimation(mainTextviewTitle, 0, INVISIBLE)
         }
     }
@@ -45,6 +49,18 @@ class CollapsingToolbarActivity : AppCompatActivity(), AppBarLayout.OnOffsetChan
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                Toast.makeText(this, "뒤로가기 버튼 클릭", Toast.LENGTH_SHORT).show()
+            }
+            R.id.action_settings -> {
+                Toast.makeText(this, "클릭", Toast.LENGTH_SHORT).show()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     /**
@@ -66,15 +82,15 @@ class CollapsingToolbarActivity : AppCompatActivity(), AppBarLayout.OnOffsetChan
         if (percentage >= PERCENTAGE_TO_SHOW_TITLE_AT_TOOLBAR) {
             if (!mIsTheTitleVisible) {
                 startAlphaAnimation(binding.mainTextviewTitle, ALPHA_ANIMATIONS_DURATION, VISIBLE)
-                startAlphaAnimation(binding.mainTextviewPrice, ALPHA_ANIMATIONS_DURATION, VISIBLE)
-                binding.mainTextviewTitle.text = "비바리퍼블리카"
-                binding.mainTextviewPrice.text = "1,230,000원"
+                startAlphaAnimation(binding.mainTextviewSubTitle, ALPHA_ANIMATIONS_DURATION, VISIBLE)
+                binding.mainTextviewTitle.text = "Title"
+                binding.mainTextviewSubTitle.text = "subTitle"
                 mIsTheTitleVisible = true
             }
         } else {
             if (mIsTheTitleVisible) {
                 startAlphaAnimation(binding.mainTextviewTitle, ALPHA_ANIMATIONS_DURATION, INVISIBLE)
-                startAlphaAnimation(binding.mainTextviewPrice, ALPHA_ANIMATIONS_DURATION, INVISIBLE)
+                startAlphaAnimation(binding.mainTextviewSubTitle, ALPHA_ANIMATIONS_DURATION, INVISIBLE)
                 mIsTheTitleVisible = false
             }
         }

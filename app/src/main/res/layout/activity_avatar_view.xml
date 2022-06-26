@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".avatarview.AvatarViewActivity">
+
+        <io.getstream.avatarview.AvatarView
+            android:id="@+id/avatar_view"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:avatarViewBorderWidth="3dp"
+            app:avatarViewIndicatorBorderColor="@color/white"
+            app:avatarViewIndicatorBorderSizeCriteria="10"
+            app:avatarViewIndicatorColor="@android:color/holo_blue_light"
+            app:avatarViewIndicatorEnabled="true"
+            app:avatarViewIndicatorPosition="bottomRight"
+            app:avatarViewIndicatorSizeCriteria="9"
+            app:avatarViewInitialsTextStyle="bold"
+            app:avatarViewBorderColorArray="@array/rainbow"
+            app:avatarViewBorderRadius="24dp"
+            app:avatarViewShape="rounded_rect" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

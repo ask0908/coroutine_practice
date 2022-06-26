@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".coroutine_and_hilt.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinPrac">
         <activity
-            android:name=".tablayout.TabActivity"
+            android:name=".coroutine_and_hilt.CoroutineHiltTestActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".avatarview.AvatarViewActivity"
+            android:name=".tablayout.TabActivity"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
@@ -30,9 +31,8 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
-            android:name=".collapsingtoolbarlayout.CollapsingToolbarActivity"
-            android:exported="true"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+            android:name=".avatarview.AvatarViewActivity"
+            android:exported="true">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->

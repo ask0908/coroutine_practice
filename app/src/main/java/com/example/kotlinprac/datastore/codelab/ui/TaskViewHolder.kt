@@ -1,4 +1,4 @@
-package com.example.kotlinprac.datastore.ui
+package com.example.kotlinprac.datastore.codelab.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlinprac.R
 import com.example.kotlinprac.databinding.TaskViewItemBinding
-import com.example.kotlinprac.datastore.data.Task
-import com.example.kotlinprac.datastore.data.TaskPriority
+import com.example.kotlinprac.datastore.codelab.data.Task
+import com.example.kotlinprac.datastore.codelab.data.TaskPriority
 import java.text.SimpleDateFormat
 import java.util.*
 

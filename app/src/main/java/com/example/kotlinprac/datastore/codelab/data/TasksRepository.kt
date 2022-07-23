@@ -1,4 +1,4 @@
-package com.example.kotlinprac.datastore.data
+package com.example.kotlinprac.datastore.codelab.data
 
 import android.icu.text.SimpleDateFormat
 import kotlinx.coroutines.flow.flowOf

@@ -1,12 +1,12 @@
-package com.example.kotlinprac.datastore.ui
+package com.example.kotlinprac.datastore.codelab.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
-import com.example.kotlinprac.datastore.data.SortOrder
-import com.example.kotlinprac.datastore.data.Task
-import com.example.kotlinprac.datastore.data.TasksRepository
-import com.example.kotlinprac.datastore.data.UserPreferencesRepository
+import com.example.kotlinprac.datastore.codelab.data.SortOrder
+import com.example.kotlinprac.datastore.codelab.data.Task
+import com.example.kotlinprac.datastore.codelab.data.TasksRepository
+import com.example.kotlinprac.datastore.codelab.data.UserPreferencesRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
 

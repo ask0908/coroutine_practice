@@ -1,4 +1,4 @@
-package com.example.kotlinprac.datastore.data
+package com.example.kotlinprac.datastore.codelab.data
 
 import android.content.Context
 import androidx.core.content.edit

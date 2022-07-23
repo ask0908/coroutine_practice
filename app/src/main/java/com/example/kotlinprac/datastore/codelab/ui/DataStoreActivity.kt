@@ -1,15 +1,13 @@
-package com.example.kotlinprac.datastore.ui
+package com.example.kotlinprac.datastore.codelab.ui
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
-import com.example.kotlinprac.R
 import com.example.kotlinprac.databinding.ActivityDataStoreBinding
-import com.example.kotlinprac.datastore.data.SortOrder
-import com.example.kotlinprac.datastore.data.TasksRepository
-import com.example.kotlinprac.datastore.data.UserPreferencesRepository
+import com.example.kotlinprac.datastore.codelab.data.SortOrder
+import com.example.kotlinprac.datastore.codelab.data.TasksRepository
+import com.example.kotlinprac.datastore.codelab.data.UserPreferencesRepository
 
 /* https://github.com/googlecodelabs/android-datastore/blob/master/app/src/main/java/com/codelab/android/datastore/ui/TaskViewHolder.kt */
 class DataStoreActivity : AppCompatActivity() {

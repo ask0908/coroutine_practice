@@ -45,7 +45,7 @@
             android:paddingHorizontal="@dimen/row_item_margin_horizontal"
             android:text="@string/show_completed"
             android:textColor="?attr/colorOnSecondary"
-            android:textSize="@dimen/task_size" />
+            android:textSize="16sp" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/show_completed_switch"

@@ -19,6 +19,12 @@
     <color name="yellow">#FFA000</color>
     <color name="green">#8BC34A</color>
 
+    <color name="titleColor">#1F75FE</color>
+    <color name="titleColorAlpha">#551F75FE</color>
+    <color name="separatorBackground">#AAAAAA</color>
+    <color name="separatorText">#FFFFFF</color>
+    <color name="tile_stroke">#000000</color>
+
     <array name="rainbow">
         <item>#FF0000</item>
         <item>#FFA500</item>

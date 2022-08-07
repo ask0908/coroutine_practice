@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/activity_coroutine_practice.xml" value="0.1566265060240964" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/activity_recycler_view_click_event.xml" value="0.292894280762565" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/coroutine_practice/app/src/main/res/layout/row_item.xml" value="0.28169014084507044" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

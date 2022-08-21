@@ -1,18 +1,20 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.kotlinprac"
         minSdkVersion 26
-        targetSdkVersion 33
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -122,4 +124,8 @@ dependencies {
     kapt "androidx.room:room-compiler:$roomVersion"
 
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.26'
+
+    implementation("com.mikepenz:materialdrawer:9.0.1")
+    implementation "com.mikepenz:materialdrawer-nav:9.0.1"
+    implementation "com.mikepenz:materialdrawer-iconics:9.0.1"
 }

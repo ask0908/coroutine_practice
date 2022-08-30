@@ -13,7 +13,7 @@
         android:theme="@style/Theme.KotlinPrac"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".recyclerview.selectsingleitem.SelectSingleItemActivity"
+            android:name=".textwatcher.TextWatcherTestActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +22,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".recyclerview.stickyheader.StickyHeaderRecyclerViewActivity"
+            android:name=".recyclerview.selectsingleitem.SelectSingleItemActivity"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".recyclerview.stickyheader.StickyHeaderRecyclerViewActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".youtube.YoutubeRecyclerViewActivity"
@@ -159,11 +170,11 @@
         <activity
             android:name=".tablayout.TabActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".avatarview.AvatarViewActivity"

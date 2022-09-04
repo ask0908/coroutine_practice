@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".mapper.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,7 +14,7 @@
         android:theme="@style/Theme.KotlinPrac"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".textwatcher.TextWatcherTestActivity"
+            android:name=".mapper.ui.MapperTestActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +23,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".recyclerview.selectsingleitem.SelectSingleItemActivity"
+            android:name=".textwatcher.TextWatcherTestActivity"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".recyclerview.selectsingleitem.SelectSingleItemActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".recyclerview.stickyheader.StickyHeaderRecyclerViewActivity"
@@ -157,7 +169,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".coroutine_and_hilt.CoroutineHiltTestActivity"
+            android:name=".tablayout.TabActivity"
             android:exported="true">
 
             <!-- <intent-filter> -->
@@ -166,15 +178,6 @@
 
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
-        </activity>
-        <activity
-            android:name=".tablayout.TabActivity"
-            android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".avatarview.AvatarViewActivity"

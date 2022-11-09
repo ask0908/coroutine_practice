@@ -14,7 +14,7 @@
         android:theme="@style/Theme.KotlinPrac"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".recyclerview.bindingadapter.BindingAdapterTestActivity"
+            android:name=".other.DateTimeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,13 +23,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".mapper.ui.MapperTestActivity"
+            android:name=".coroutine.CoroutineExampleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".recyclerview.bindingadapter.BindingAdapterTestActivity"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".mapper.ui.MapperTestActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".textwatcher.TextWatcherTestActivity"

@@ -126,4 +126,7 @@ dependencies {
     implementation "com.mikepenz:materialdrawer-iconics:9.0.1"
 
     implementation 'io.github.bootpay:android:4.2.0'
+
+    // EventBus
+    implementation 'org.greenrobot:eventbus:3.0.0'
 }

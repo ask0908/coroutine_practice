@@ -13,4 +13,8 @@
     <dimen name="error_text_size">24sp</dimen>
 
     <dimen name="article_list_spacing">8dp</dimen>
+
+    <!-- Room 예제 -->
+    <dimen name="margin">16dp</dimen>
+    <dimen name="margin_between_elements">8dp</dimen>
 </resources>

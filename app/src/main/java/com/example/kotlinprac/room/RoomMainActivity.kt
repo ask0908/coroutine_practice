@@ -7,7 +7,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import com.example.kotlinprac.R
 
-// https://developer.android.com/codelabs/basic-android-kotlin-training-persisting-data-room?hl=ko#3
 class RoomMainActivity : AppCompatActivity(R.layout.activity_room_main) {
 
     private lateinit var navController: NavController

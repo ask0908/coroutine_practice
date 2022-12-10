@@ -3,6 +3,7 @@ package com.example.kotlinprac.room.data
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.text.NumberFormat
 
 /* @Entity : 클래스를 DB Entity 클래스로 표시함. 각 엔티티 클래스에서 DB 테이블이 아이템을 보유하기 위해 만들어짐 */
 @Entity(tableName = "item")
@@ -16,3 +17,5 @@ data class Item(
     @ColumnInfo(name = "quantity")
     val quantityInStock: Int
 )
+
+fun Item.getFormattedPrice(): String = NumberFormat.getCurrencyInstance().format(itemPrice)

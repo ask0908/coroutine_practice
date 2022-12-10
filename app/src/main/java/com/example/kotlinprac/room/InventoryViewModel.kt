@@ -1,8 +1,6 @@
 package com.example.kotlinprac.room
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.kotlinprac.room.data.Item
 import com.example.kotlinprac.room.data.ItemDao
 import kotlinx.coroutines.launch
@@ -10,6 +8,9 @@ import kotlinx.coroutines.launch
 class InventoryViewModel(
     private val itemDao: ItemDao
 ): ViewModel() {
+    // InventoryViewModel 클래스 시작부에 Flow를 통해 DB의 모든 아이템들을 가져와 변수에 할당
+    val allItems: LiveData<List<Item>> = itemDao.getItems().asLiveData()
+
     // Item 객체를 비차단 방식으로 DB에 추가
     private fun insertItem(item: Item) {
         // 메인 쓰레드 밖에서 DB와 상호작용하려면 뷰모델 안에서 코루틴을 시작해야 한다. 그러려면 viewModelScope.launch {}를 써서 일시정지 함수를 호출한다

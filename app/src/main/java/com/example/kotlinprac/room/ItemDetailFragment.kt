@@ -34,13 +34,18 @@ class ItemDetailFragment : Fragment() {
             itemName.text = item.itemName
             itemPrice.text = item.getFormattedPrice()
             itemCount.text = item.quantityInStock.toString()
+
+            sellItem.isEnabled = viewModel.isStockAvailable(item)
+            sellItem.setOnClickListener {
+                viewModel.sellItem(item)
+            }
         }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentItemDetailBinding.inflate(inflater, container, false)
         return binding.root
     }

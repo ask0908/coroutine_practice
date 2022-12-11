@@ -47,6 +47,27 @@ class InventoryViewModel(
         // getItem()은 Flow를 리턴하기 때문에 LiveData로 쓰려면 asLiveData()를 붙여야 한다
         return itemDao.getItem(id).asLiveData()
     }
+
+    private fun updateItem(item: Item) {
+        viewModelScope.launch {
+            itemDao.update(item)
+        }
+    }
+
+    fun sellItem(item: Item) {
+        if (item.quantityInStock > 0) {
+            /* copy() : data class의 모든 인스턴스에서 사용 가능함. 일부 속성을 바꾸지만 나머지 속성은 그대로 두기 위해
+            * 객체를 복사할 때 사용된다 */
+            // 현재 재고수량을 1 줄인 뒤 이 상태를 Room DB에 반영한다
+            val newItem = item.copy(quantityInStock = item.quantityInStock - 1)
+            updateItem(newItem)
+        }
+    }
+
+    /* 재고수량이 0보다 큰지 확인하는 함수. 0일 경우 버튼을 비활성화시켜서 클릭하지 못하게 만들어야 하기 때문에 필요 */
+    fun isStockAvailable(item: Item): Boolean {
+        return (item.quantityInStock > 0)
+    }
 }
 
 class InventoryViewModelFactory(

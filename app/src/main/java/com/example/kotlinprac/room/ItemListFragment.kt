@@ -35,7 +35,9 @@ class ItemListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val adapter = ItemListAdapter {
-            // 어댑터를 val에 선언할 때 어댑터 생성자를 이렇게도 초기화 가능하다
+            // 클릭 핸들러 추가
+            val action = ItemListFragmentDirections.actionItemListFragmentToItemDetailFragment(it.id)
+            this.findNavController().navigate(action)
         }
         binding.recyclerView.adapter = adapter
 

@@ -4,6 +4,7 @@ import androidx.lifecycle.*
 import com.example.kotlinprac.room.data.Item
 import com.example.kotlinprac.room.data.ItemDao
 import kotlinx.coroutines.launch
+import kotlin.coroutines.coroutineContext
 
 class InventoryViewModel(
     private val itemDao: ItemDao
@@ -39,6 +40,12 @@ class InventoryViewModel(
             return false
         }
         return true
+    }
+
+    // 아이템의 id에 따라 Room DB에서 아이템 세부정보를 검색하는 함수
+    fun retrieveItem(id: Int): LiveData<Item> {
+        // getItem()은 Flow를 리턴하기 때문에 LiveData로 쓰려면 asLiveData()를 붙여야 한다
+        return itemDao.getItem(id).asLiveData()
     }
 }
 

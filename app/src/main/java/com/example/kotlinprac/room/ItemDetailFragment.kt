@@ -39,6 +39,10 @@ class ItemDetailFragment : Fragment() {
             sellItem.setOnClickListener {
                 viewModel.sellItem(item)
             }
+
+            deleteItem.setOnClickListener {
+                showConfirmationDialog()
+            }
         }
     }
 
@@ -54,7 +58,8 @@ class ItemDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val id = navigationArgs.itemId
-        // id를 넘겨 Room DB에서 해당 아이템의 정보를 가져오는 절차를 관찰시킨 다음 가져온 데이터들을 뷰에 바인딩
+        // id를 넘겨 Room DB에서 해당 아이템의 정보를 가져오는 절차를 관찰시킨 다음 가져온 데이터들을 뷰에 바인딩한다
+        // 지연 초기화할 예정이었던 item에 값이 담김으로써 선택한 아이템의 수정, 삭제가 가능해진다
         viewModel.retrieveItem(id).observe(this.viewLifecycleOwner) { selectedItem ->
             item = selectedItem
             bind(item)
@@ -80,6 +85,7 @@ class ItemDetailFragment : Fragment() {
      * Deletes the current item and navigates to the list fragment.
      */
     private fun deleteItem() {
+        viewModel.deleteItem(item)
         findNavController().navigateUp()
     }
 

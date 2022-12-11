@@ -35,6 +35,7 @@ class InventoryViewModel(
         insertItem(newItem)
     }
 
+    // Room DB 안에 아이템을 추가, 수정할 때 사용
     fun isEntryValid(itemName: String, itemPrice: String, itemCount: String): Boolean {
         if (itemName.isBlank() || itemPrice.isBlank() || itemCount.isBlank()) {
             return false
@@ -73,6 +74,31 @@ class InventoryViewModel(
         viewModelScope.launch {
             itemDao.delete(item)
         }
+    }
+
+    private fun getUpdatedItemEntry(
+        itemId: Int,
+        itemName: String,
+        itemPrice: String,
+        itemCount: String
+    ): Item {
+        return Item(
+            id = itemId,
+            itemName = itemName,
+            itemPrice = itemPrice.toDouble(),
+            quantityInStock = itemCount.toInt()
+        )
+    }
+
+    fun updateItem(
+        itemId: Int,
+        itemName: String,
+        itemPrice: String,
+        itemCount: String
+    ) {
+        // Room DB에 변경사항을 전달하기 위해 새 Item 객체를 만들어 보낸다
+        val updatedItem = getUpdatedItemEntry(itemId, itemName, itemPrice, itemCount)
+        updateItem(updatedItem)
     }
 }
 

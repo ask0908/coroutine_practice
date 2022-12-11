@@ -43,6 +43,10 @@ class ItemDetailFragment : Fragment() {
             deleteItem.setOnClickListener {
                 showConfirmationDialog()
             }
+
+            editItem.setOnClickListener {
+                editItem()
+            }
         }
     }
 
@@ -87,6 +91,15 @@ class ItemDetailFragment : Fragment() {
     private fun deleteItem() {
         viewModel.deleteItem(item)
         findNavController().navigateUp()
+    }
+
+    /* 수정할 때는 fragment_add_item.xml을 재사용한다. 프래그먼트의 제목 문자열을 아이템 id와 같이 전송한다 */
+    private fun editItem() {
+        val action = ItemDetailFragmentDirections.actionItemDetailFragmentToAddItemFragment(
+            getString(R.string.edit_fragment_title),    // "Edit Item"
+            item.id
+        )
+        this.findNavController().navigate(action)
     }
 
     /**

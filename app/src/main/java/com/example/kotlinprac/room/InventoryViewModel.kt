@@ -8,7 +8,7 @@ import kotlin.coroutines.coroutineContext
 
 class InventoryViewModel(
     private val itemDao: ItemDao
-): ViewModel() {
+) : ViewModel() {
     // InventoryViewModel 클래스 시작부에 Flow를 통해 DB의 모든 아이템들을 가져와 변수에 할당
     val allItems: LiveData<List<Item>> = itemDao.getItems().asLiveData()
 
@@ -29,8 +29,8 @@ class InventoryViewModel(
             quantityInStock = itemCount.toInt()
         )
 
-    // 이 퍼블릭 함수는 프래그먼트에서 호출되어 새 아이템을 DB에 추가한다다
-   fun addNewItem(itemName: String, itemPrice: String, itemCount: String) {
+    // 이 퍼블릭 함수는 프래그먼트에서 호출되어 새 아이템을 DB에 추가한다
+    fun addNewItem(itemName: String, itemPrice: String, itemCount: String) {
         val newItem = getNewItemEntry(itemName, itemPrice, itemCount)
         insertItem(newItem)
     }
@@ -104,7 +104,7 @@ class InventoryViewModel(
 
 class InventoryViewModelFactory(
     private val itemDao: ItemDao
-): ViewModelProvider.Factory {
+) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         // 매개변수로 받은 modelClass가 InventoryViewModel과 같은지 확인하고 그 인스턴스 반환
         require(modelClass.isAssignableFrom(InventoryViewModel::class.java)) {

@@ -19,8 +19,8 @@ class AddItemFragment : Fragment() {
 
     private val navigationArgs: ItemDetailFragmentArgs by navArgs()
 
-    // by activityViewModels {} : 속성 위임을 써서 프래그먼트 전체에서 뷰모델을 공유하게 함함
-   private val viewModel: InventoryViewModel by activityViewModels {
+    // by activityViewModels {} : 속성 위임을 써서 프래그먼트 전체에서 뷰모델을 공유하게 함
+    private val viewModel: InventoryViewModel by activityViewModels {
         InventoryViewModelFactory((activity?.application as InventoryApplication).database.itemDao())
     }
     lateinit var item: Item

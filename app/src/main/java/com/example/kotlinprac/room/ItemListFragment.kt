@@ -44,8 +44,8 @@ class ItemListFragment : Fragment() {
         // allItems에 옵저버를 연결해서 데이터 변경사항을 수신 대기한다
         viewModel.allItems.observe(this.viewLifecycleOwner) { items ->
             items.let {
-                // 새 아이템이 리스트에 포함되서 리사이클러뷰가 업데이트됨됨
-               adapter.submitList(it)
+                // 새 아이템이 리스트에 포함되서 리사이클러뷰가 업데이트됨
+                adapter.submitList(it)
             }
         }
 

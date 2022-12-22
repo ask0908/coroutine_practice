@@ -125,4 +125,7 @@ dependencies {
 
     // EventBus
     implementation 'org.greenrobot:eventbus:3.0.0'
+
+    // Coil
+    implementation("io.coil-kt:coil:2.2.2")
 }

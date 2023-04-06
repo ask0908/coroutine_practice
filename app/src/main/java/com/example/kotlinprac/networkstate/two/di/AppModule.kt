@@ -3,6 +3,8 @@ package com.example.kotlinprac.networkstate.two.di
 import com.example.kotlinprac.BuildConfig
 import com.example.kotlinprac.networkstate.two.data.network.NewsService
 import com.example.kotlinprac.networkstate.two.di.util.AuthenticationInterceptor
+import com.example.kotlinprac.paging.prac.GITHUB_API_HEADER_PREFIX
+import com.example.kotlinprac.paging.prac.GithubApiService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -53,10 +55,27 @@ class AppModule {
         .connectTimeout(1, TimeUnit.MINUTES)
         .readTimeout(1, TimeUnit.MINUTES)
         .writeTimeout(1, TimeUnit.MINUTES)
+        .addInterceptor { chain ->
+            chain.proceed(
+                chain.request()
+                    .newBuilder()
+                    .header(GITHUB_API_HEADER_PREFIX, "token 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")
+                    .build()
+            )
+        }
         .build()
 
     @Singleton
     @Provides
     fun provideCommonService(retrofit: Retrofit): NewsService =
         retrofit.create(NewsService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideGithubApiService(client: OkHttpClient): GithubApiService = Retrofit.Builder()
+        .baseUrl("https://api.github.com/")
+        .addConverterFactory(GsonConverterFactory.create(provideGson()))
+        .client(client)
+        .build()
+        .create(GithubApiService::class.java)
 }

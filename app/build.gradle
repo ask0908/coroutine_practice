@@ -26,6 +26,7 @@ android {
 
         buildConfigField "String", "NEWS_API_KEY", properties['news_api_key']
         buildConfigField "String", "NEWS_API_BASE_URL", properties['news_api_base_url']
+        buildConfigField "String", "GITHUB_API_HEADER", properties['github_api_header']
     }
     buildFeatures {
         viewBinding true

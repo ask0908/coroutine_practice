@@ -26,6 +26,8 @@
     <color name="separatorText">#FFFFFF</color>
     <color name="tile_stroke">#000000</color>
 
+    <color name="textColor">#B8B8B8</color>
+
     <array name="rainbow">
         <item>#FF0000</item>
         <item>#FFA500</item>

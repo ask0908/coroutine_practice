@@ -51,10 +51,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etSearchQuery" />
 
-        <include
-            android:id="@+id/progressOverlay"
-            layout="@layout/dim_layout"/>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

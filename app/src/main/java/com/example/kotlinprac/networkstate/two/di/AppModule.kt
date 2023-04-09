@@ -59,7 +59,7 @@ class AppModule {
             chain.proceed(
                 chain.request()
                     .newBuilder()
-                    .header(GITHUB_API_HEADER_PREFIX, "token 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")
+                    .header(GITHUB_API_HEADER_PREFIX, "token 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")
                     .build()
             )
         }

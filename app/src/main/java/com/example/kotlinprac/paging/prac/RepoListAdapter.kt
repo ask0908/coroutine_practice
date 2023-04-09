@@ -6,15 +6,15 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlinprac.databinding.ItemRepoBinding
-import com.example.kotlinprac.paging.codelab.advanced.ui.RepoViewHolder
-import timber.log.Timber
 
-class RepoListAdapter: PagingDataAdapter<Repo, RepoListAdapter.RepoViewHolder>(REPO_COMPARATOR) {
+class RepoListAdapter: PagingDataAdapter<Repo, RepoListAdapter.RepoViewHolder>(diffUtil) {
 
     companion object {
-        private val REPO_COMPARATOR = object : DiffUtil.ItemCallback<Repo>() {
-            override fun areItemsTheSame(oldItem: Repo, newItem: Repo): Boolean = oldItem.id == newItem.id
-            override fun areContentsTheSame(oldItem: Repo, newItem: Repo): Boolean = oldItem == newItem
+        private val diffUtil = object : DiffUtil.ItemCallback<Repo>() {
+            override fun areItemsTheSame(oldItem: Repo, newItem: Repo): Boolean =
+                oldItem.id == newItem.id
+            override fun areContentsTheSame(oldItem: Repo, newItem: Repo): Boolean =
+                oldItem == newItem
         }
     }
 
@@ -31,7 +31,9 @@ class RepoListAdapter: PagingDataAdapter<Repo, RepoListAdapter.RepoViewHolder>(R
         }
     }
 
-    inner class RepoViewHolder(private val binding: ItemRepoBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class RepoViewHolder(
+        private val binding: ItemRepoBinding
+    ): RecyclerView.ViewHolder(binding.root) {
         fun bind(repo: Repo) {
             binding.apply {
                 repository = repo

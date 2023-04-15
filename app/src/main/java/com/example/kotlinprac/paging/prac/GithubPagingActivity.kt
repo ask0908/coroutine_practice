@@ -60,8 +60,8 @@ class GithubPagingActivity :
             }
         }
 
-        lifecycleScope.launch {
-            githubViewModel.repoResult.collectLatest { pagingData ->
+        githubViewModel.repos.observe(this@GithubPagingActivity) { pagingData ->
+            lifecycleScope.launch {
                 repoListAdapter.submitData(pagingData)
             }
         }

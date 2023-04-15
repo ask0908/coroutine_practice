@@ -1,7 +1,6 @@
 package com.example.kotlinprac.paging.prac
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,16 +14,18 @@ import javax.inject.Inject
 class GithubViewModel @Inject constructor(
     private val repository: GithubRepository
 ): ViewModel() {
-    private val _searchQuery = MutableStateFlow<String>("")
+    private val _searchQuery = MutableLiveData<String>()
+    val searchQuery: LiveData<String> = _searchQuery
 
-    val repoResult: Flow<PagingData<Repo>> = _searchQuery
-        .flatMapLatest { query ->
-            if (query.isBlank()) {
-                flowOf(PagingData.empty())
-            } else {
-                repository.getSearchRepoResult(query).cachedIn(viewModelScope)
-            }
+    private val repoResult: LiveData<PagingData<Repo>> = _searchQuery.switchMap { query ->
+        if (query.isBlank()) {
+            MutableLiveData(PagingData.empty())
+        } else {
+            repository.getSearchRepoResult(query).cachedIn(viewModelScope)
         }
+    }
+
+    val repos: LiveData<PagingData<Repo>> = repoResult
 
     fun searchRepos(query: String) {
         _searchQuery.value = query

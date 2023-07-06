@@ -3,6 +3,9 @@
     package="com.example.kotlinprac">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".networkstate.two.base.BaseApplication"
@@ -14,7 +17,7 @@
         android:theme="@style/Theme.KotlinPrac"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".espressoWeb.EspressoWebTestActivity"
+            android:name=".mlkit.FirebaseMLKitTestActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,13 +26,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".paging.prac.GithubPagingActivity"
+            android:name=".espressoWeb.EspressoWebTestActivity"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".paging.prac.GithubPagingActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".networkstate.two.ui.WebViewActivity"
@@ -323,6 +337,15 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
+        <provider
+            android:name=".MyFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
     </application>
 
 </manifest>

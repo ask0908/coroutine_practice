@@ -29,7 +29,7 @@ fun <T> LiveData<T>.getOrAwaitValue(
 
         // Don't wait indefinitely if the LiveData is not set.
         if (!latch.await(time, timeUnit)) {
-            throw TimeoutException("LiveData value was never set.")
+            throw TimeoutException("LiveData에 값이 아직 설정되지 않았습니다")
         }
 
     } finally {

@@ -1,0 +1,7 @@
+<paths>
+    <external-path
+        name="my_images"
+        path="Android/data/com.example.kotlinprac/files/Pictures" />
+    <external-files-path name="externalStorage" path="."/>
+    <files-path name="internalStorage"  path="."/>
+</paths>

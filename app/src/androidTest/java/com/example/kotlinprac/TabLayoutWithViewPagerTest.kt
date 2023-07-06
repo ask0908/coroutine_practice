@@ -1,17 +1,14 @@
 package com.example.kotlinprac
 
 import android.view.View
-import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.PerformException
 import androidx.test.espresso.UiController
 import androidx.test.espresso.ViewAction
 import androidx.test.espresso.matcher.BoundedMatcher
 import androidx.test.espresso.matcher.ViewMatchers.*
-import androidx.test.ext.junit.rules.ActivityScenarioRule
-import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.runner.AndroidJUnit4
 import com.example.kotlinprac.tablayout.TabActivity
 import com.google.android.material.tabs.TabLayout
-import junit.framework.Assert.assertTrue
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.allOf
@@ -20,12 +17,11 @@ import org.hamcrest.core.IsEqual.equalTo
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.util.regex.Pattern.matches
 
 @RunWith(AndroidJUnit4::class)
 class TabLayoutWithViewPagerTest: CollectedViewMatchers, ActionViewMatchers {
-    @get:Rule
-    val activityTestRule = ActivityScenarioRule(TabActivity::class.java)
+//    @get:Rule
+//    val activityTestRule = ActivityScenarioRule(TabActivity::class.java)
 
     private fun selectTabAtPosition(tabIndex: Int): ViewAction {
         return object : ViewAction {

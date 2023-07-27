@@ -17,7 +17,7 @@
         android:theme="@style/Theme.KotlinPrac"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".firebase.FirebasePerformanceActivity"
+            android:name=".rx.RxKotlinTestActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,13 +26,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".mlkit.FirebaseMLKitTestActivity"
+            android:name=".firebase.FirebasePerformanceActivity"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".mlkit.FirebaseMLKitTestActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".espressoWeb.EspressoWebTestActivity"

@@ -35,4 +35,9 @@
         <item>#00FF00</item>
         <item>#0000FF</item>
     </array>
+
+    <color name="textBlue">#264653</color>
+    <color name="bgColor">#E9C46A</color>
+    <color name="btnBgColor">#2A9D8F</color>
+    <color name="lightGray">#B7B7A4</color>
 </resources>

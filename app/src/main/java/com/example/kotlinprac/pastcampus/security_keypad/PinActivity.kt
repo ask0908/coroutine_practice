@@ -1,6 +1,7 @@
 package com.example.kotlinprac.pastcampus.security_keypad
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.kotlinprac.BaseActivity
 import com.example.kotlinprac.R
@@ -17,6 +18,10 @@ class PinActivity: BaseActivity<ActivityPinBinding>(R.layout.activity_pin), Shuf
         bind {
             viewModel = this@PinActivity.viewModel
             shuffleKeyBoard.setKeypadListener(this@PinActivity)
+        }
+
+        viewModel.messageLiveData.observe(this) {
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -25,15 +25,21 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".pastcampus.security_keypad.SecurityKeypadMainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".udemy.CalculateAgeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".udemy.CalculateAgeActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".other.OtherActivity"
@@ -437,6 +443,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
+        <activity android:name=".pastcampus.security_keypad.PinActivity" />
 
         <provider
             android:name=".MyFileProvider"

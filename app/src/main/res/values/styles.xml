@@ -40,7 +40,7 @@
     </style>
 
     <!-- 패캠 보안 키패드 예제 앱 -->
-    <style name="Button.Keypad" parent="Widget.AppCompat.Button">
+    <style name="Button.Keypad" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_columnWeight">1</item>
@@ -51,5 +51,13 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="Code">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:src">@drawable/baseline_circle_gray_24</item>
     </style>
 </resources>

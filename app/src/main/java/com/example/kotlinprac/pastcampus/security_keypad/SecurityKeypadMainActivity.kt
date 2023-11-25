@@ -1,5 +1,6 @@
 package com.example.kotlinprac.pastcampus.security_keypad
 
+import android.content.Intent
 import android.os.Bundle
 import com.example.kotlinprac.BaseActivity
 import com.example.kotlinprac.R
@@ -14,7 +15,7 @@ class SecurityKeypadMainActivity :
     }
 
     fun openShuffle() {
-        //
+        startActivity(Intent(this, PinActivity::class.java))
     }
 
     fun openVerifyOtp() {

@@ -1,5 +1,6 @@
 package com.example.kotlinprac.pastcampus.search_media.list
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -21,6 +22,7 @@ class ListAdapter: ListAdapter<ListItem, RecyclerView.ViewHolder>(diffUtil) {
             override fun areItemsTheSame(oldItem: ListItem, newItem: ListItem): Boolean =
                 oldItem.thumbnailUrl == newItem.thumbnailUrl
 
+            @SuppressLint("DiffUtilEquals")
             override fun areContentsTheSame(oldItem: ListItem, newItem: ListItem): Boolean =
                 oldItem == newItem
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kotlinprac">
+    package="com.example.kotlinprac" >
 
     <uses-feature
         android:name="android.hardware.camera.any"
@@ -22,9 +22,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinPrac"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
         <activity
-            android:name=".pastcampus.image_contract.mvi.MviImageContractActivity"
+            android:name=".pastcampus.search_media.SearchMediaMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,8 +33,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".pastcampus.image_contract.mvvm.ImageContractMainActivity"
-            android:exported="true">
+            android:name=".pastcampus.image_contract.mvi.MviImageContractActivity"
+            android:exported="true" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
@@ -42,11 +42,22 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
+            android:name=".pastcampus.image_contract.mvvm.ImageContractMainActivity"
+            android:exported="true" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
             android:name=".pastcampus.wallet.WalletDetailActivity"
             android:exported="true" />
         <activity
             android:name=".pastcampus.wallet.WalletMainActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -68,7 +79,7 @@
 
         <activity
             android:name=".pastcampus.security_keypad.SecurityKeypadMainActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -79,7 +90,7 @@
         </activity>
         <activity
             android:name=".udemy.CalculateAgeActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -90,7 +101,7 @@
         </activity>
         <activity
             android:name=".other.OtherActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -101,7 +112,7 @@
         </activity>
         <activity
             android:name=".webview.WebViewCacheActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -112,7 +123,7 @@
         </activity>
         <activity
             android:name=".recyclerview.uitest.RecyclerViewUiTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -123,7 +134,7 @@
         </activity>
         <activity
             android:name=".kotlinx_serialization.SerializationTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -134,7 +145,7 @@
         </activity>
         <activity
             android:name=".permission.PermissionRequestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -145,7 +156,7 @@
         </activity>
         <activity
             android:name=".photopicker.PhotoPickerTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -156,7 +167,7 @@
         </activity>
         <activity
             android:name=".permission.PermissionTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -167,7 +178,7 @@
         </activity>
         <activity
             android:name=".rx.RxKotlinTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -178,7 +189,7 @@
         </activity>
         <activity
             android:name=".firebase.FirebasePerformanceActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -189,7 +200,7 @@
         </activity>
         <activity
             android:name=".mlkit.FirebaseMLKitTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -200,7 +211,7 @@
         </activity>
         <activity
             android:name=".espressoWeb.EspressoWebTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -211,7 +222,7 @@
         </activity>
         <activity
             android:name=".paging.prac.GithubPagingActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -225,7 +236,7 @@
             android:exported="false" />
         <activity
             android:name=".networkstate.two.ui.MainActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -236,7 +247,7 @@
         </activity>
         <activity
             android:name=".networkstate.one.NetworkStateTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -251,7 +262,7 @@
         </activity>
         <activity
             android:name=".coil.CoilTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -262,7 +273,7 @@
         </activity>
         <activity
             android:name=".mvp.ViewActionActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -273,7 +284,7 @@
         </activity>
         <activity
             android:name=".eventbus.EventBusTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -287,7 +298,7 @@
             android:exported="true" />
         <activity
             android:name=".textwatcher.TextWatcherTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -298,7 +309,7 @@
         </activity>
         <activity
             android:name=".recyclerview.selectsingleitem.SelectSingleItemActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -309,7 +320,7 @@
         </activity>
         <activity
             android:name=".recyclerview.stickyheader.StickyHeaderRecyclerViewActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -321,7 +332,7 @@
         <activity
             android:name=".youtube.YoutubeRecyclerViewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -333,7 +344,7 @@
         <activity
             android:name=".youtube.YoutubeTestActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -344,7 +355,7 @@
         </activity>
         <activity
             android:name=".recyclerview.clickevent.RecyclerViewClickEventActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -355,7 +366,7 @@
         </activity>
         <activity
             android:name=".other.CoroutinePracticeActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -369,7 +380,7 @@
             android:exported="true" />
         <activity
             android:name=".paging.codelab.advanced.ui.SearchRepositoriesActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -380,7 +391,7 @@
         </activity>
         <activity
             android:name=".datastore.DataStoreTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -391,7 +402,7 @@
         </activity>
         <activity
             android:name=".datastore.codelab.ui.DataStoreActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -402,7 +413,7 @@
         </activity>
         <activity
             android:name=".callback.CallbackSecondActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -413,7 +424,7 @@
         </activity>
         <activity
             android:name=".callback.CallbackFirstActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -426,7 +437,7 @@
             android:name=".room.RoomMainActivity"
             android:exported="true"
             android:supportsRtl="true"
-            android:theme="@style/Theme.InventoryApp">
+            android:theme="@style/Theme.InventoryApp" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -437,7 +448,7 @@
         </activity>
         <activity
             android:name=".tablayout.TabActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -448,7 +459,7 @@
         </activity>
         <activity
             android:name=".avatarview.AvatarViewActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -459,7 +470,7 @@
         </activity>
         <activity
             android:name=".navigation2.NavigationTestActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -470,7 +481,7 @@
         </activity>
         <activity
             android:name=".navigation.NavigationMainActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -481,7 +492,7 @@
         </activity>
         <activity
             android:name=".viewpager.ViewPagerActivity"
-            android:exported="true">
+            android:exported="true" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -496,7 +507,7 @@
             android:name=".MyFileProvider"
             android:authorities="${applicationId}.fileProvider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />

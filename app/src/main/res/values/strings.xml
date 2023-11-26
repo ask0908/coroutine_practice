@@ -95,4 +95,7 @@ Praesent tincidunt lorem sit amet mi consequat cursus. Interdum et malesuada fam
     <string name="element_text">Element</string>
     <string name="item_element_text">This is element #</string>
     <string name="middle">This is the middle!</string>
+
+    <!-- 패캠 미디어 검색 예제 -->
+    <string name="search_hint_text">검색어를 입력해 주세요</string>
 </resources>

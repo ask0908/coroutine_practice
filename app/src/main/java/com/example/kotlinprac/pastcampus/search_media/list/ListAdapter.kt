@@ -13,7 +13,9 @@ import com.example.kotlinprac.pastcampus.search_media.list.viewholder.VideoViewH
 import com.example.kotlinprac.pastcampus.search_media.model.ImageItem
 import com.example.kotlinprac.pastcampus.search_media.model.ListItem
 
-class ListAdapter: ListAdapter<ListItem, RecyclerView.ViewHolder>(diffUtil) {
+class ListAdapter(
+    private val itemHandler: ItemHandler? = null
+): ListAdapter<ListItem, RecyclerView.ViewHolder>(diffUtil) {
     companion object {
         private const val IMAGE = 0
         private const val VIDEO = 1
@@ -32,9 +34,9 @@ class ListAdapter: ListAdapter<ListItem, RecyclerView.ViewHolder>(diffUtil) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return if (viewType == IMAGE) {
-            ImageViewHolder(ItemImageBinding.inflate(inflater, parent, false))
+            ImageViewHolder(ItemImageBinding.inflate(inflater, parent, false), itemHandler)
         } else {
-            VideoViewHolder(ItemVideoBinding.inflate(inflater, parent, false))
+            VideoViewHolder(ItemVideoBinding.inflate(inflater, parent, false), itemHandler)
         }
     }
 

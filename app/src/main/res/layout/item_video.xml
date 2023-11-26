@@ -7,6 +7,10 @@
         <variable
             name="item"
             type="com.example.kotlinprac.pastcampus.search_media.model.VideoItem" />
+
+        <variable
+            name="handler"
+            type="com.example.kotlinprac.pastcampus.search_media.list.ItemHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,6 +80,7 @@
             android:id="@+id/favoriteImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> handler.onClickFavorite(item)}"
             app:favorite="@{item.favorite}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

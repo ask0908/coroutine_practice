@@ -4,7 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.kotlinprac.pastcampus.search_media.model.ImageItem
 import com.example.kotlinprac.pastcampus.search_media.model.ListItem
+import com.example.kotlinprac.pastcampus.search_media.model.VideoItem
 import com.example.kotlinprac.pastcampus.search_media.repository.SearchRepository
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 
@@ -34,6 +36,33 @@ class SearchViewModel(private val searchRepository: SearchRepository): ViewModel
                 _listLiveData.value = emptyList()
             })
         )
+    }
+
+    fun toggleFavorite(item: ListItem) {
+        _listLiveData.value = _listLiveData.value?.map {
+            // 바꾸는 이유는 SearchFragment 안에서 클릭 시 하트가 채워지고 비워지는 처리를 해야 해서 LiveData 업데이트를 쳐야 한다
+            if (it == item) {
+                when (it) {
+                    is ImageItem -> {
+                        it.copy(isFavorite = !item.isFavorite)
+                    }
+                    is VideoItem -> {
+                        it.copy(isFavorite = !item.isFavorite)
+                    }
+                    else -> {
+                        it
+                    }
+                }.also { changeItem ->
+                    if (Common.favoritesList.contains(item)) {
+                        Common.favoritesList.remove(item)
+                    } else {
+                        Common.favoritesList.add(changeItem)
+                    }
+                }
+            } else {
+                it
+            }
+        }
     }
 
     override fun onCleared() {

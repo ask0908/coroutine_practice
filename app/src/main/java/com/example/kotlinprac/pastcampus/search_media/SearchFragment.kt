@@ -9,13 +9,15 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.example.kotlinprac.R
 import com.example.kotlinprac.databinding.FragmentSearchBinding
+import com.example.kotlinprac.pastcampus.search_media.list.ItemHandler
 import com.example.kotlinprac.pastcampus.search_media.list.ListAdapter
+import com.example.kotlinprac.pastcampus.search_media.model.ListItem
 import com.example.kotlinprac.pastcampus.search_media.repository.SearchRepositoryImpl
 
 class SearchFragment : Fragment() {
 
     private var binding: FragmentSearchBinding? = null
-    private val adapter by lazy { ListAdapter() }
+    private val adapter by lazy { ListAdapter(Handler(viewModel)) }
     private val viewModel: SearchViewModel by viewModels {
         SearchViewModel.SearchViewModelFactory(SearchRepositoryImpl(RetrofitManager.searchService))
     }
@@ -63,5 +65,12 @@ class SearchFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
+    }
+
+    class Handler(private val viewModel: SearchViewModel): ItemHandler {
+        override fun onClickFavorite(item: ListItem) {
+            viewModel.toggleFavorite(item)
+        }
+
     }
 }

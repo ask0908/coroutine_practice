@@ -271,6 +271,10 @@ dependencies {
     // SMS 인식
     implementation "com.google.android.gms:play-services-auth-api-phone:18.0.1"
 
+    // 코루틴
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
     testImplementation "org.mockito:mockito-core:3.12.4"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
     testImplementation "com.squareup.okhttp3:mockwebserver:4.10.0"

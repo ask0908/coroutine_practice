@@ -45,4 +45,8 @@
     <color name="firstCard">#BB86FC</color>
     <color name="secondCard">#EB455F</color>
     <color name="thirdCard">#439A97</color>
+
+    <color name="point">#6C00FF</color>
+    <color name="cancel">#FF0000</color>
+    <color name="pay">#000000</color>
 </resources>

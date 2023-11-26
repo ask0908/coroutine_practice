@@ -6,7 +6,6 @@ import androidx.savedstate.SavedStateRegistryOwner
 import com.example.kotlinprac.paging.codelab.advanced.api.GithubService
 import com.example.kotlinprac.paging.codelab.advanced.data.GithubRepository
 import com.example.kotlinprac.paging.codelab.advanced.db.RepoDatabase
-import com.example.kotlinprac.paging.codelab.advanced.ui.ViewModelFactory
 
 /**
  * Class that handles object creation.
@@ -27,7 +26,7 @@ object Injection {
      * Provides the [ViewModelProvider.Factory] that is then used to get a reference to
      * [ViewModel] objects.
      */
-    fun provideViewModelFactory(context: Context, owner: SavedStateRegistryOwner): ViewModelProvider.Factory {
-        return ViewModelFactory(owner, provideGithubRepository(context))
-    }
+//    fun provideViewModelFactory(context: Context, owner: SavedStateRegistryOwner): ViewModelProvider.Factory {
+//        return ViewModelFactory(owner, provideGithubRepository(context))
+//    }
 }

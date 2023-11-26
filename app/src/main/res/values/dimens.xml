@@ -17,4 +17,14 @@
     <!-- Room 예제 -->
     <dimen name="margin">16dp</dimen>
     <dimen name="margin_between_elements">8dp</dimen>
+
+    <!-- 패캠 월렛 서비스 예제 -->
+    <dimen name="card_width">250dp</dimen>
+    <dimen name="card_height">150dp</dimen>
+    <!-- 카드가 최상단에 있으면 4dp, 나머지 2개는 1dp -->
+    <dimen name="elevation_back">1dp</dimen>
+    <dimen name="elevation_front">4dp</dimen>
+    <!-- 카드 선택 시 넘어가는 애니메이션을 위해 오른쪽 상단으로 넘길 예정. 좌표 미리 설정함 -->
+    <dimen name="translation_move_x">120dp</dimen>
+    <dimen name="translation_move_y">-200dp</dimen>
 </resources>

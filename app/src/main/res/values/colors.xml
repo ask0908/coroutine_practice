@@ -40,4 +40,9 @@
     <color name="bgColor">#E9C46A</color>
     <color name="btnBgColor">#2A9D8F</color>
     <color name="lightGray">#B7B7A4</color>
+
+    <!-- 패캠 월렛 서비스 예제 -->
+    <color name="firstCard">#BB86FC</color>
+    <color name="secondCard">#EB455F</color>
+    <color name="thirdCard">#439A97</color>
 </resources>

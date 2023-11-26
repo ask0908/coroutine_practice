@@ -24,22 +24,33 @@
         android:theme="@style/Theme.KotlinPrac"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".pastcampus.security_keypad.VerifyOtpActivity"
-            android:exported="true" />
-        <activity
-            android:name=".pastcampus.security_keypad.IdentifyInputActivity"
-            android:exported="true" />
-        <meta-data
-            android:name="android.app.lib_name"
-            android:value="" />
-        <activity
-            android:name=".pastcampus.security_keypad.SecurityKeypadMainActivity"
+            android:name=".pastcampus.wallet.WalletMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".pastcampus.security_keypad.VerifyOtpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".pastcampus.security_keypad.IdentifyInputActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+
+        <activity
+            android:name=".pastcampus.security_keypad.SecurityKeypadMainActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".udemy.CalculateAgeActivity"

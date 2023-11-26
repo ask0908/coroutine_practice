@@ -19,6 +19,6 @@ class SecurityKeypadMainActivity :
     }
 
     fun openVerifyOtp() {
-        //
+        startActivity(Intent(this, IdentifyInputActivity::class.java))
     }
 }

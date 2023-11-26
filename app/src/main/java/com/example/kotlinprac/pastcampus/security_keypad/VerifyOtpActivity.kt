@@ -96,18 +96,15 @@ class VerifyOtpActivity : BaseActivity<ActivityVerifyOtpBinding>(R.layout.activi
     private fun startSmsRetriever() {
         SmsRetriever.getClient(this).startSmsRetriever().also { task ->
             task.addOnSuccessListener {
-                Log.e(this::class.java.simpleName, "addOnSuccessListener() called")
                 if (smsReceiver == null) {
                     smsReceiver = AuthOtpReceiver().apply {
                         setOtpListener(this@VerifyOtpActivity)
                     }
                 }
                 registerReceiver(smsReceiver, smsReceiver!!.doFilter())
-                Log.e(this::class.java.simpleName, "registerReceiver() called")
             }
 
             task.addOnFailureListener {
-                Log.e(this::class.java.simpleName, "addOnFailureListener() called")
                 stopSmsRetriever()
             }
         }

@@ -85,4 +85,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textAlignment">center</item>
     </style>
+
+     <!-- 패캠 쇼핑몰 예제 -->
+    <style name="RatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <!-- RatingBar가 차지 않았을 때 색깔 -->
+        <item name="colorControlNormal">#AAAAAA</item>
+        <!-- RatingBar가 찼을 때 색깔 -->
+        <item name="colorControlActivated">#FFD700</item>
+    </style>
 </resources>

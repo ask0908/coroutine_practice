@@ -2,6 +2,7 @@ package com.example.kotlinprac.pastcampus.shopping_mall.viewholder
 
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kotlinprac.BR
 import com.example.kotlinprac.pastcampus.shopping_mall.model.ListItem
 
 abstract class BindingViewHolder<VB: ViewDataBinding>(
